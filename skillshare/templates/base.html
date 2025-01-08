@@ -1,25 +1,34 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Skill Share{% endblock %}</title>
+    <title>Skill Share - {% block title %}{% endblock %}</title>
+
+
+    <!-- static files -->
+     <link rel="stylesheet" href="{% static 'home/css/home.css'%}">
+     {% block additional_css %}{% endblock additional_css %}
+     <script></script>
 </head>
+
 <body>
-    <header>
-        <div>Skill Share</div>
-        <div>
-            <nav>
-                <ul>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Profile</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<div class="header">
+    <div class="container-lg">
+        <a href="#" class="logo-with-name" >
+            <img src="{% static 'home/images/logo.png'%}" alt="Logo" class="logo-with-name-logo">
+            <div class="logo-name">FRIEND</div>
+        </a>
+        <ul class="header-nav">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="{% url 'home'%}">Home</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="{% url 'about'%}">About</a></li>
+            <li><a href="#">Profile</a></li>
+        </ul>
+    </div>
+</div>
     <main>
         {% block content %}
         {% endblock %}

@@ -122,7 +122,8 @@ STATIC_URL = 'static/'
 
 # This is for global static files outside apps
 STATICFILES_DIRS = [
-    BASE_DIR / "static",  
+    BASE_DIR / "static", 
+    BASE_DIR / "apps/home/static", 
 ]
 
 # Default primary key field type

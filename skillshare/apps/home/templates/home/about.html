@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock %}
+{% block additional_css %}<link rel="stylesheet" href="{% static 'home/css/about.css' %}">{% endblock additional_css %}
+
+
+{% block content %}
+<div class="about-page">
+    <h1>About Skill Share</h1>
+    <p>Skill Share is a platform for connecting, learning, and growing through skill-sharing among friends and professionals.</p>
+    <img src="{% static 'home/images/about_us.png' %}" alt="About Us Image">
+    
+    <section class="our-mission">
+        <h2>Our Mission</h2>
+        <p>To create a community-driven platform that empowers individuals to enhance their skills and share knowledge globally. We believe in the transformative power of collaboration.</p>
+    </section>
+</div>
+{% endblock %}
