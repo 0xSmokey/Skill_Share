@@ -6,9 +6,24 @@ body {
     width: 100vw;
 }
 
+::selection {
+    background: rgb(147 130 255 / 50%); 
+    color: white;        
+}
+
 html, body {
     overflow-x: hidden;
     position: relative;
+}
+
+.header .container-lg:before {
+    background: radial-gradient(62.87% 100% at 50% 100%, rgba(255, 255, 255, .12) 0%, rgba(255, 255, 255, 0) 100%);
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 100%;
 }
 
 .header {
@@ -108,4 +123,17 @@ li {
     display: list-item;
     text-align: -webkit-match-parent;
     unicode-bidi: isolate;
+}
+
+.header-nav-link {
+    color: #fffffff0;
+    display: block;
+    transition: .3s cubic-bezier(.6,.6,0,1) color;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    
+}
+
+.header-nav-link:hover {
+    color: #ffffff9c;
+    text-shadow: 0 0 5.9px rgba(255, 255, 255, 0.4);
 }

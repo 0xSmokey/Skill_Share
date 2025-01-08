@@ -21,11 +21,11 @@
             <div class="logo-name">FRIEND</div>
         </a>
         <ul class="header-nav">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="{% url 'home'%}">Home</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="{% url 'about'%}">About</a></li>
-            <li><a href="#">Profile</a></li>
+            <li><a class="header-nav-link" href="#">Dashboard</a></li>
+            <li><a class="header-nav-link"  href="{% url 'home'%}">Home</a></li>
+            <li><a class="header-nav-link"  href="#">Skills</a></li>
+            <li><a class="header-nav-link"  href="{% url 'about'%}">About</a></li>
+            <li><a class="header-nav-link"  href="#">Profile</a></li>
         </ul>
     </div>
 </div>
@@ -33,10 +33,6 @@
         {% block content %}
         {% endblock %}
     </main>
-    <footer>
-        <div>
-            <p>&copy; 2025 SkillShare</p>
-        </div>
-    </footer>
+
 </body>
 </html>
