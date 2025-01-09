@@ -120,6 +120,11 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+#This piece of code added to access the static files anywhere 
+STATICFILES_DIRS = [
+    BASE_DIR / "apps/home/static",
+]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
