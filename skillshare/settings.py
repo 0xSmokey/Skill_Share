@@ -122,7 +122,6 @@ STATIC_URL = 'static/'
 
 #This piece of code added to access the static files anywhere 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
     BASE_DIR / "apps/home/static",
 ]
 
