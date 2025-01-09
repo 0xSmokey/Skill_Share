@@ -1,7 +1,13 @@
 {% extends "base.html" %}
 {% block title %}Home page{% endblock  %}
+{% load static %}
+{% block additional_css %}<link rel="stylesheet" href="{% static 'home/css/home.css'%}">{% endblock additional_css %}
 
 <--! body of home page -->
+<!-- body of home page -->
 {% block content %}
-<p> This is home page </p>
+    <div class="heading-sec">
+        <h1>Learn from the Best, One Skill at a Time</h1>
+    </div>
+
 {% endblock  %}
