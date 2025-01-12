@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Share - {% block title %}{% endblock %}</title>
+    <!-- static files -->
+     <link rel="stylesheet" href="{% static 'home/css/base.css'%}">
+     {% block additional_css %}{% endblock additional_css %}
+     <script></script>
+</head>
+
+<body>
+<div class="header">
+    <div class="container-lg">
+        <a href="#" class="logo-with-name" >
+            <img src="{% static 'home/images/logo.png'%}" alt="Logo" class="logo-with-name-logo">
+            <div class="logo-name">FRIEND</div>
+        </a>
+        <ul class="header-nav">
+            <li><a class="header-nav-link" href="#">Dashboard</a></li>
+            <li><a class="header-nav-link"  href="{% url 'home'%}">Home</a></li>
+            <li><a class="header-nav-link"  href="#">Skills</a></li>
+            <li><a class="header-nav-link"  href="#">About</a></li>
+            <li><a class="header-nav-link"  href="#">Profile</a></li>
+        </ul>
+    </div>
+</div>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+
+</body>
+</html>
