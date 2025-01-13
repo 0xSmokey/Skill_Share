@@ -8,7 +8,7 @@
     <!-- static files -->
      <link rel="stylesheet" href="{% static 'home/css/base.css'%}">
      {% block additional_css %}{% endblock additional_css %}
-     <script></script>
+
 </head>
 
 <body>
@@ -23,7 +23,7 @@
             <li><a class="header-nav-link"  href="{% url 'home'%}">Home</a></li>
             <li><a class="header-nav-link"  href="#">Skills</a></li>
             <li><a class="header-nav-link"  href="#">About</a></li>
-            <li><a class="header-nav-link"  href="#">Profile</a></li>
+            <li><a class="header-nav-link" href="{% url 'profile-modal' %}" >Profile</a></li>
         </ul>
     </div>
 </div>
@@ -31,7 +31,9 @@
         {% block content %}
         {% endblock %}
     </main>
-
+    {% block additional_js %}{% endblock additional_js %}
+    
+    
 
 </body>
 </html>
