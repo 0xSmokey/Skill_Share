@@ -1,0 +1,129 @@
+/* Overlay Background */
+
+
+
+/* ------------- Gen Code ----------------- */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+/* Pop-Up Container */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #080808;
+    color: #fff;
+    width: 65%;
+    max-width: 2000px;
+    border-radius: 10px;
+    border-color: #9a1919;
+    box-shadow: 0px 0px 10px rgba(122, 122, 122, 0.418);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+/* Header */
+.popup-header h2 {
+    margin: 0 0 0px 0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    border-bottom: 1px solid #333;
+}
+
+/* Close Button */
+.close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Popup Body */
+.popup-body {
+    padding: 20px;
+    display: flex;
+    border-left: 1px solid #333;
+}
+
+.pro-pic {
+    height: 95px;
+    width: 95px;
+}
+
+/* Sidebar */
+.settings-sidebar {
+    margin: 0 0 20px 0;
+    padding: 10px 20px;
+    width: 25%;
+    border-right: 1px solid #333;
+    padding-right: 20px;
+    float: left;
+    float: left;
+
+}
+
+.settings-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.settings-sidebar ul li {
+    margin: 10px 0;
+    cursor: pointer;
+    color: #d0d0d0;
+}
+
+.settings-sidebar ul li:hover,
+.settings-sidebar ul li.active {
+    color: #ffffff;
+}
+
+/* Main Content */
+.settings-content {
+    width: 75%;
+    padding-left: 20px;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+/* Form Styling */
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background: #222;
+    color: #fff;
+}
+
+.save-btn {
+    background: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    background: #218838;
+}

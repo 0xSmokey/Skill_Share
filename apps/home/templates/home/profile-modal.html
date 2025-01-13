@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Profile{% endblock  %}
+{% load static %}
+{% block additional_css %}<link rel="stylesheet" href="{% static 'home/css/profile.css' %}">{% endblock additional_css %}
+
+
+{% block content %}
+<!-- profile-modal.html -->
+
+<div class="overlay"></div>
+<div class="popup">
+
+    <div class="popup-header">
+
+        <h2>Settings <button id="closeBtn" data-home-url="{% url 'home' %}"> &times; </button> </h2>
+        <nav class="settings-sidebar">
+            <ul>
+                <li onclick="showSection('profile')">Profile</li>
+                <li onclick="showSection('account')">Account</li>
+                <li onclick="showSection('notification')">Notification</li>
+            </ul>
+        </nav>
+        
+    </div>
+
+
+    <div class="popup-body">
+        <div class="settings-container">
+
+            <div class="settings-content">
+                <!-- Profile Section -->
+                <div id="profile" class="section active">
+                    <h3>Profile</h3>
+                    <div class="profile-picture">
+                        <img class="pro-pic"  src="{% static 'home/images/_profile_pic.png' %}" alt="Profile Picture">
+                        <button>Change Picture</button>
+                        <button>Delete Picture</button>
+                    </div>
+                    <div>
+                        <label for="profileName">Profile Name</label>
+                        <input type="text" id="profileName" value="Spider man">
+                    </div>
+                    <div>
+                        <label for="username">User Name</label>
+                        <input type="text" id="username" value="@PeterPaker">
+                    </div>
+                    <button class="save-btn">Save Changes</button>
+                </div>
+                <!-- Account Section -->
+                <div id="account" class="section">
+                    <h3>Account</h3>
+                    <p>Account settings go here...</p>
+                </div>
+                <!-- Notification Section -->
+                <div id="notification" class="section">
+                    <h3>Notification</h3>
+                    <p>Notification settings go here...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock  %}
+{% block additional_js %}
+    <script src="{% static 'home/js/profile-modal.js' %}"></script>
+{% endblock additional_js %}
